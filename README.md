@@ -12,3 +12,7 @@ Depois, entre na pasta do projeto e clique no arquivo de seu interesse referente
 - Parse.sh ou .bat executa o parser de games.log, um arquivo data.log será criado na pasta scripts
 
 - Rank.sh ou .bat executa o ranking de kills de todos os jogos em games.log, um arquivo rank.log será criado na pasta scripts
+
+# Observações
+- o código está em Ruby
+- Dois jogadores diferentes podem assumir o mesmo nome, seriam tratados com um jogador só (Devido a explicação do problema, presumi que isto seria o certo a fazer, mas esse problema pode ser evitado com o uso de Tags)
