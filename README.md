@@ -15,4 +15,4 @@ Depois, entre na pasta do projeto e clique no arquivo de seu interesse referente
 
 # Observações
 - o código está em Ruby
-- Dois jogadores diferentes podem assumir o mesmo nome, seriam tratados com um jogador só (Devido a explicação do problema, presumi que isto seria o certo a fazer, mas esse problema pode ser evitado com o uso de Tags)
+- Dois jogadores diferentes podem assumir o mesmo nome, seriam tratados com um jogador só em MoD, e separados em Parser, que utiliza do sistema de Tags (Devido a explicação do problema, presumi que isto seria o certo a fazer, mas esse problema pode ser evitado com o uso de Tags em MoD)
