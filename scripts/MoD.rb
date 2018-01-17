@@ -35,7 +35,7 @@ def format(data,gameno)
   for i in data
     a+="        '"+i[0]+"': "+i[1].to_s+",\n"
   end
-  a+="    }\n}"
+  a+="    }\n}\n"
   return a
 end
 contador = 1
