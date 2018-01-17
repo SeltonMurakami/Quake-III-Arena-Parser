@@ -75,7 +75,7 @@ def format(data,gameno)
   for i in data[2]
     a+="        '"+i[0]+"' : "+i[2].to_s+",\n"
   end
-  a+="    }\n}"
+  a+="    }\n}\n"
   return a
 end
 result = ""
