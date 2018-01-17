@@ -1,6 +1,5 @@
 gamelog = File.open("games.log", "r").read.split("\n")
 #Divide game.log em um array de linhas
-#Registro geral dos kills TODO
 def CreateGameReport(start,gamelog)
   a = start+1
   #contador
@@ -88,7 +87,6 @@ while i < gamelog.length
   if gamelog[i].include? "InitGame:"
     #assimila o report ao resultado final e aumenta o contador
     result += format(CreateGameReport(i,gamelog),contador)
-    #registra os kills desse jogo no ranking geral TODO
     contador += 1
   end
   #aumenta o contador i
@@ -98,4 +96,3 @@ end
 File.open("data.log","w") { |file| file.write(result)}
 #imprime o relatório dos jogos
 puts result
-#coloca o Registro Geral de kills num arquivo TODO
