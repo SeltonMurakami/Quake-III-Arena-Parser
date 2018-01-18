@@ -19,14 +19,14 @@ def CreateGameReport(start,gamelog)
       if line[2] == "1022"
         #se a tag for "1022" (tag de <world>), diminua os kills da vítima
         for i in kills
-          if i.include? "Tag:"+line[3]
+          if i.include? line[line.index("killed")+1..line.index("by")-1].join(" ")
             i[2] += -1
           end
         end
       else
         #caso contrário, aumente o no de kills de quem o fez
         for i in kills
-          if i.include? "Tag:"+line[2]
+          if i.include? line[5..line.index("killed")-1].join(" ")
             i[2] += 1
           end
         end
@@ -39,10 +39,10 @@ def CreateGameReport(start,gamelog)
       b = true
       #se o cadastro ja existe, o atualize
       for i in players
-        if i.include? line[2]
-          i[0] = str
+        if i.include? str
+          i[1] = line[2]
           for j in kills
-            if j.include? "Tag:"+line[2]
+            if j.include? str
               j[0] = i[0]
             end
           end
